@@ -2,7 +2,7 @@ const palindrome = str => {
   let newStr = str.replace(/\W|_/gi, "").toLowerCase();
   if (newStr.length < 1) return false;
   for (let i = 0; i < Math.floor(newStr.length / 2); i++) {
-    if (newStr[i] !== newStr.charAt(newStr.length - i - 1)) return false;
+    if (newStr[i] !== newStr[newStr.length - i - 1]) return false;
   }
   return true;
 }
